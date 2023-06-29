@@ -1,12 +1,8 @@
-import Header from "./components/header";
-import Project from "./components/project";
+import Main from "./pages/main";
 
 const App = () => {
   return (
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-      <Header/>
-      <Project/>
-    </div>
+    <Main/>
   );
 }
 
