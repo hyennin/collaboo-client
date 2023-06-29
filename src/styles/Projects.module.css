@@ -1,0 +1,36 @@
+.container {
+  width: 280px;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.info_container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.intro {
+  font-size: 13px;
+  color: #959595;
+}
+
+.deadline {
+  font-size: 12px;
+}
+
+.progress_bar {
+  width: 70px;
+  height: 70px;
+}
