@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FCFCFC;
+}
+
+.gen_container {
+  margin: 30px;
+  height: 660px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36px;
+  padding-top: 14px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 14px;
+}
+
+.label {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.input {
+  height: 30px;
+  padding-left: 10px;
+  border: 0;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.select_container {
+  display: flex;
+  column-gap: 10px;
+}
+
+.selected {
+  width: 82px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  border-radius: 6px;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.selected2 {
+  width: 82px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.option_container {
+  position: absolute;
+
+}
+
+.option {
+  width: 48px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-left: 34px;
+  font-size: 15px;
+  background-color: white;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.option:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+.num {
+  margin-left: 34px;
+  font-size: 15px;
+}
+
+.down_btn {
+  margin-right: 6px;
+}
+
+.datepicker {
+  display: flex;
+  
+}
+
+.from, .to {
+  width: 130px;
+  height: 30px;
+  padding-left: 10px;
+  border: 0;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  height: 120px;
+  padding: 5px 10px;
+  border: 0;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+
+.gen_btn {
+  margin-top: -48px;
+  width: 177px;
+  height: 36px;
+  color: white;
+  background-color: #03D069;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}

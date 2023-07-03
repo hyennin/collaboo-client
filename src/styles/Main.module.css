@@ -38,7 +38,7 @@
 .content {
   position: relative;
   z-index: 1000;
-  width: 321px;
+  margin: 30px;
   height: 660px;
   display: flex;
   flex-direction: column;
