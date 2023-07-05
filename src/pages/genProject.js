@@ -6,8 +6,11 @@ import calendar from '../assets/calendar.png';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { ko } from 'date-fns/esm/locale';
+import { useNavigate } from 'react-router-dom';
 
 const GenProject = () => {
+  const navigate = useNavigate();
+
   // select custom
   const [currentValue, setCurrentValue] = useState("2");
   const [showOptions, setShowOptions] = useState(false);
@@ -79,7 +82,7 @@ const GenProject = () => {
           <textarea className={styles.info}/>
         </form>
       </div>
-      <button className={styles.gen_btn}>프로젝트 생성</button>
+      <button className={styles.gen_btn} onClick={() => navigate('/')}>프로젝트 생성</button>
     </div>
   );
 }

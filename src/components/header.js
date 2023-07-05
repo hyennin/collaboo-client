@@ -10,8 +10,8 @@ const Header = (props) => {
   return (
     <div className={styles.container}>
       { !props.isMain && <img className={styles.back} onClick={() => navigate(-1)} src={back} alt='뒤로가기'/> }
-      { props.isMain ? <img className={styles.logo} src={logo} alt='Collaboo'/> : <div>{props.title}</div> }
-      <img className={styles.bell} src={bell} alt='알림'/>
+      { props.isMain ? <img className={styles.logo} src={logo} alt='Collaboo'/> : <div className={styles.title}>{props.title}</div> }
+      { props.isMain && <img className={styles.bell} onClick={() => navigate('/alarm')} src={bell} alt='알림'/>}
     </div>
   );
 }

@@ -12,10 +12,15 @@
   margin-left: 32%;
 }
 
+.title {
+  margin-right: auto;
+}
+
 .bell {
   margin-right: 10px;
 }
 
 .back {
   margin-left: 10px;
+  margin-right: auto;
 }
