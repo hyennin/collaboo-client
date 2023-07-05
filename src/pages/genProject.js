@@ -2,13 +2,25 @@ import { useState } from 'react';
 import Header from '../components/header';
 import styles from '../styles/GenProject.module.css';
 import down from '../assets/down.png';
+import calendar from '../assets/calendar.png';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import { ko } from 'date-fns/esm/locale';
+import { useNavigate } from 'react-router-dom';
 
 const GenProject = () => {
+  const navigate = useNavigate();
+
+  // select custom
   const [currentValue, setCurrentValue] = useState("2");
   const [showOptions, setShowOptions] = useState(false);
   const handleOnChangeSelectValue = (e) => {
     setCurrentValue(e.target.getAttribute("value"));
   };
+
+  // datepicker
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
 
   return (
     <div className={styles.container}>
@@ -19,7 +31,30 @@ const GenProject = () => {
           <input className={styles.input}/>
           <label className={styles.label}>마감일</label>
           <div className={styles.datepicker}>
-            <input className={styles.from}/>&nbsp;&nbsp;~&nbsp;&nbsp;<input className={styles.to}/>
+            <DatePicker
+              className={styles.picker}
+              selected={startDate}
+              onChange={date => setStartDate(date)}
+              selectsStart
+              startDate={startDate}
+              endDate={endDate}
+              minDate={new Date()}
+              dateFormat='yy.MM.dd'
+              locale={ko}
+            />
+            &nbsp;&nbsp;~&nbsp;&nbsp;
+            <DatePicker
+              className={styles.picker}
+              selected={endDate}
+              onChange={date => setEndDate(date)}
+              selectsEnd
+              startDate={startDate}
+              endDate={endDate}
+              minDate={startDate}
+              dateFormat='yy.MM.dd'
+              locale={ko}
+            />
+            {/* <div className={styles.to}><img className={styles.calendar} src={calendar} alt='날짜'/></div> */}
           </div>
           <label className={styles.label}>인원</label>
           <div className={styles.select_container}>
@@ -47,7 +82,7 @@ const GenProject = () => {
           <textarea className={styles.info}/>
         </form>
       </div>
-      <button className={styles.gen_btn}>프로젝트 생성</button>
+      <button className={styles.gen_btn} onClick={() => navigate('/')}>프로젝트 생성</button>
     </div>
   );
 }

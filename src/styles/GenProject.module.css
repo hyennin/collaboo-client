@@ -100,14 +100,19 @@
   
 }
 
-.from, .to {
-  width: 130px;
+.picker {
+  width: 120px;
   height: 30px;
-  padding-left: 10px;
+  padding: 0 10px;
   border: 0;
   outline: none;
   border-radius: 6px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.calendar {
+  margin-top: 4px;
+  float: right;
 }
 
 .info {
