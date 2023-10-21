@@ -24,3 +24,8 @@ a {
 li {
   list-style-type: none;
 }
+
+button {
+  border: 0;
+  outline: 0;
+}
